@@ -1,0 +1,30 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Canile.MainWindow"
+        Title="Canile">
+<ScrollViewer>
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="Seleziona la razza:" FontWeight="Bold"/>
+        
+        <ComboBox Name="CmbRazza" SelectedIndex="0" SelectionChanged="CmbRazza_SelectionChanged"/>
+        <TextBlock Text="Nome" FontWeight="Bold"></TextBlock>
+        <TextBox Name="TxtNome"></TextBox>
+        <TextBlock Text="Eta" FontWeight="Bold"></TextBlock>
+        <TextBox Name="TxtEta"></TextBox>
+        <TextBlock Text="Data Ingresso" FontWeight="Bold"></TextBlock>
+        <CalendarDatePicker Name="CalDataIngresso" HorizontalAlignment="Stretch"></CalendarDatePicker>
+        <TextBlock Text="Note per l'adozione" FontWeight="Bold"></TextBlock>
+        <TextBox Name="TxtNote"></TextBox>
+        <Button Name="BtnRegistra" Content="Registra Cane" Click="BtnRegistra_Click"></Button>
+
+        <TextBlock Text="Lista dei cani in canile" FontWeight="Bold"></TextBlock>
+        <ListBox Name="ListaCani" Height="320"></ListBox>
+        <Button Name="BtnAdotta" Content="Procedi con l'Adozione" Click="BtnAdotta_Click"></Button>
+        <TextBlock Name="TxtRisultato" Text="" TextWrapping="Wrap" FontWeight="Bold"></TextBlock>
+    </StackPanel>
+    </ScrollViewer>
+</Window>
